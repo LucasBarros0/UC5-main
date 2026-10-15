@@ -1,104 +1,55 @@
-# 📘 Pokédex Desktop App
+# Pokédex Desktop
 
-Uma aplicação desktop feita em Python que consome a PokéAPI para buscar e exibir informações completas sobre Pokémon de forma simples, visual e moderna.
+Aplicativo desktop desenvolvido em Python para consultar informações sobre Pokémon usando a [PokéAPI](https://pokeapi.co/).
 
----
+## Funcionalidades
 
-## 🔍 Funcionalidades
+- Busca de Pokémon por nome, com autocompletar
+- Exibição de imagens oficiais nas versões normal e shiny
+- Consulta de altura, peso, tipos e habilidades
+- Adição e remoção de Pokémon favoritos, com armazenamento local
+- Lista de favoritos na tela principal
+- Alternância entre tema claro e escuro
+- Cache local dos Pokémon já consultados
+- Tratamento de erros de busca e conexão
+- Interface gráfica construída com Tkinter
 
-- 🔎 Buscar Pokémon por nome com autocompletar
-- 🖼️ Exibir imagem oficial do Pokémon (normal e shiny)
-- 📏 Mostrar altura e peso (em metros e quilos)
-- 🧬 Listar tipos e habilidades
-- 💖 Adicionar e remover Pokémon dos favoritos (armazenamento local)
-- ⭐ Lista de favoritos na tela principal
-- 🌙 Alternar entre tema claro e escuro
-- ⚡ Cache offline dos Pokémon já buscados
-- ⚠️ Tratamento de erros de busca e conexões
-- 🖥️ Interface gráfica moderna e intuitiva com Tkinter
+## Tecnologias
 
----
+- Python 3.x
+- Tkinter
+- Requests
+- Pillow (PIL)
+- JSON para dados locais e cache
+- PokéAPI
 
-## 🧰 Tecnologias utilizadas
+## Como executar
 
-- **Python 3.x**
-- **Tkinter** – interface gráfica
-- **Requests** – consumo de APIs
-- **Pillow (PIL)** – exibição de imagens
-- **JSON** – manipulação e cache de dados
-- **PokéAPI** – fonte dos dados dos Pokémon
+É necessário ter Python 3.x instalado. No terminal, clone o repositório e instale as dependências:
 
----
-
-## ▶️ Como rodar o projeto
-
-1. Clone o repositório e acesse a pasta do projeto:
-
-    ```bash
-    git clone https://github.com/seu-usuario/pokedex-desktop.git
-    cd pokedex-desktop
-    ```
-
-2. Instale as dependências:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-    > Se não houver um arquivo `requirements.txt`, instale manualmente:
-    > 
-    > ```bash
-    > pip install requests pillow
-    > ```
-
-3. Execute o aplicativo:
-
-    ```bash
-    python main.py
-    ```
-
----
-
-## 📸 Screenshots
-
-> Adicione aqui prints da interface principal, detalhes do Pokémon e lista de favoritos.
-
----
-
-## 📂 Estrutura de Pastas
-
-```
-UC5-main/
-│
-├── services/
-│   ├── api_client.py
-│   └── favorites.py
-│
-├── ui/
-│   ├── main_window.py
-│   └── details_view.py
-│
-├── poke_cache.json
-├── favorites.json
-├── main.py
-└── README.md
+```bash
+git clone https://github.com/LucasBarros0/UC5-main.git
+cd UC5-main
+python -m pip install requests pillow
 ```
 
----
+Depois, inicie a aplicação:
 
-## 🙋‍♂️ Contribuição
+```bash
+python app.py
+```
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+A conexão com a internet é necessária para consultar a PokéAPI. O cache permite acessar informações de Pokémon que já foram carregadas anteriormente.
 
----
+## Estrutura principal
 
-## 📄 Licença
+- `app.py`
+- `models.py`
+- `services/`
+- `ui/`
+- `favorites.json` — dados dos favoritos
+- `poke_cache.json` — cache local
 
-Este projeto é livre para fins educacionais.
+## Créditos
 
----
-
-## 🤝 Créditos
-
-- [PokéAPI](https://pokeapi.co/) – Fonte dos dados dos Pokémon
-- Ícones e sprites oficiais: [PokeAPI Sprites](https://github.com/PokeAPI/sprites)
+Os dados são fornecidos pela [PokéAPI](https://pokeapi.co/).
